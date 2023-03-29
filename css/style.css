@@ -43,6 +43,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .rightDivF img{
     width: 100%;
@@ -115,3 +116,82 @@ body{
         max-width: 200px;
     }
 }
+
+/* ///////////////////// */
+.container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    display: flex;
+    gap: 0.625em;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container span {
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+  }
+  
+  .container span::before {
+    content: "";
+    display: block;
+    border-radius: inherit;
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+    animation: ripple 1.8s ease-out infinite;
+    animation-delay: inherit;
+    z-index: -1;
+  }
+  
+  .container span:nth-of-type(1) {
+    background-color: #FFF;
+  }
+  
+  .container span:nth-of-type(2) {
+    background-color: #FFF;
+    animation-delay: 0.1s;
+  }
+  
+  .container span:nth-of-type(3) { 
+    background-color: #FFF;
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+  
+    to {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+
+  /* ////////////////////////////////// */
+
+
+  .socialMedia{
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 10%;
+    z-index: 99;
+  }
+
+  .socialMedia a i{
+    color: #FFF;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 5px;
+  }
+
+  .solcialNon a i{
+    font-size: 25px;
+    color: #2C2C2C;
+    border: 2px solid #2C2C2C;
+  }
